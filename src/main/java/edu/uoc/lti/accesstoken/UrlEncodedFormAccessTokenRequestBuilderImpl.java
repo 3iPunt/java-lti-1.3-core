@@ -1,6 +1,7 @@
 package edu.uoc.lti.accesstoken;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -9,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-public class UrlEncodedFormAccessTokenRequestBuilderImpl implements AccessTokenRequestBuilder {
+public class UrlEncodedFormAccessTokenRequestBuilderImpl implements AccessTokenRequestBuilder, Serializable {
 
   @Override
   public String build(final AccessTokenRequest request) throws IOException {
