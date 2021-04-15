@@ -10,6 +10,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import java.util.LinkedHashMap;
+
 /**
  * @author Created by xaracil@uoc.edu
  */
@@ -28,5 +30,9 @@ public class Presentation {
 	@JsonProperty("return_url")
 	private String returnUrl;
 	@JsonProperty("locale")
-	private String locale;	
+	private String locale;
+
+	// Required in Canvas
+	private LinkedHashMap errors;
+	private String validation_context;
 }
